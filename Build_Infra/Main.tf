@@ -1,5 +1,5 @@
 resource "aws_iam_role" "tetris_project_admin" {
-  name = "Tetris_project"
+  name               = "Tetris_project"
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -59,7 +59,7 @@ resource "aws_security_group" "Tetris_sg" {
 }
 
 resource "aws_instance" "web" {
-  ami                    = "ami-0df4b2961410d4cff"
+  ami                    = "ami-03f4878755434977f"
   instance_type          = "t2.large"
   key_name               = "K8sproject"
   vpc_security_group_ids = [aws_security_group.Tetris_sg.id]
